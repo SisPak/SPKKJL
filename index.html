@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sistem Pakar Kalkulasi Konstruksi Jalan Raya</title>
+	<link rel="stylesheet" href="main.css" type="text/css">
+    <script src="modernizr.min.js"></script>
+	<script src="object.js"></script>
+	<script type="text/javascript">
+	  window.onload = function(){
+		function addJavascript(jsname,pos) {
+			var th = document.getElementsByTagName(pos)[0];
+			var s = document.createElement('script');
+			s.setAttribute('type','text/javascript');
+			s.setAttribute('src',jsname);
+			th.appendChild(s);
+		}
+
+		if (Modernizr.localstorage) {
+			var note = document.getElementById('right_content');
+			note.innerHTML = "HTML5 Local storage is supported for this browser.";
+			addJavascript('generate_database.js','head');
+		} else {
+			var note = document.getElementById('right_content');
+			note.innerHTML = "HTML5 Local storage isn't supported for this browser. Try to update your browser.";
+		}
+	  };
+	
+	</script>
+  </head>
+  <body>
+	<!--Div 1. Wrap the whole page-->
+	<div class="wrapper">
+		<!--Div 2. Header-->
+		<div id="header">
+			<!--<div id="title">Sistem Pakar Kalkulasi Konstruksi Jalan Raya</div>-->
+			<div id="title">SISTEM PAKAR KALKULASI KONSTRUKSI JALAN RAYA</div>
+		</div>
+		<!--End of Div 2.-->
+		<!--Div 2. Content-->
+		<div id="content">
+			<div id="right_content" class="">
+				<textarea id="note"></textarea>
+			</div>
+			<div id="left_content" class=""></div>
+		</div>
+		<!--End of Div 2.-->
+	</div>
+	<!--End of Div 1.-->
+	
+	</script>
+  </body>
+</html>
